@@ -52,6 +52,12 @@ docker-compose run api rails db:create
 docker-compose up
 ```
 
+
+### コンテナの中に入るコマンド
+```
+docker-compose exec api bash
+```
+
 ### その他
 1. **entrypoint.sh**
 この entrypoint.sh スクリプトは、Docker コンテナ起動時に実行される 初期化スクリプト です。特に Rails コンテナが PostgreSQL に依存しているときに、DBが起動するのを待ってから Rails サーバーなどを実行するために使います。
